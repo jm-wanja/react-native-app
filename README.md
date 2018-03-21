@@ -9,6 +9,7 @@ This is not an actual mobile application. This repository contains only React Na
 * [Building](#building)
   * [Fastline installation](#fastline-installation)
   * [Fastline run instructions](#fastline-run-instructions)
+* [Releasing and versioning](#releasing-and-versioning)
 * [Environment](#environment)
 * [Project structure](#project-structure)
 * [Native modules](#native-modules)
@@ -111,6 +112,18 @@ On android, navigate to the android folder and run `fastlane beta`. Alternativel
 ```
 
 The newly build apk will be found in `android/app/build/outputs/apk/app-release.apk`
+
+## Releasing and versioning
+
+We use [Semantic Versioning 2.0.0](https://semver.org/) (MAJOR.MINOR.PATCH) with the following rules:
+
+- MAJOR version when you make incompatible API changes
+- MINOR version when you add functionality in a backwards-compatible manner
+- PATCH version when you make backwards-compatible bug fixes
+
+Git tags are used from stable 1.0.0 version. Unstable builds (0.x.y) are not tagged via Git (only published on NPM).
+
+TODO: release Git tags on NPM automatically.
 
 ## Environment
 
