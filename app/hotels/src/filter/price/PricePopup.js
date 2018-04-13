@@ -1,12 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import {
-  Text,
-  ButtonPopup,
-  Slider,
-  Price,
-} from '@kiwicom/react-native-app-shared';
+import { Text, ButtonPopup, Slider } from '@kiwicom/react-native-app-shared';
 import Translation from '@kiwicom/react-native-app-translations';
 
 type Props = {|
@@ -54,14 +49,12 @@ export default class PricePopup extends React.Component<Props, State> {
   renderLabel = () => {
     const { start, end } = this.state.price;
     const { currency } = this.props;
-    const endPrice = <Price amount={end} currency={currency} />;
-    const startPrice = <Price amount={start} currency={currency} />;
 
     return (
       <Text>
-        {startPrice}
+        <Translation passThrough={`${start} ${currency}`} />
         <Translation passThrough=" - " />
-        {endPrice}
+        <Translation passThrough={`${end} ${currency}`} />
       </Text>
     );
   };
