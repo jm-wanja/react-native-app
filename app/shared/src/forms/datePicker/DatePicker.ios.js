@@ -10,14 +10,16 @@ import {
 import DatePickerButton from './DatePickerButton';
 import BarPopup from '../../popup/BarPopup';
 
-type Props = {|
+// Intentionally not using strict typing,
+// There could be more props that needs to be passed
+type Props = {
   date: Date,
   onDateChange: (date: Date) => void,
   minDate?: Date,
   maxDate?: Date,
   format?: string,
   iconComponent?: React.Node,
-|};
+};
 
 type State = {|
   isPickerOpen: boolean,

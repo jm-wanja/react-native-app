@@ -5,14 +5,16 @@ import { DatePickerAndroid } from 'react-native';
 
 import DatePickerButton from './DatePickerButton';
 
-type Props = {|
+// Intentionally not using strict typing,
+// There could be more props that needs to be passed
+type Props = {
   date: Date,
   onDateChange: (date: Date) => void,
   format?: string,
   minDate?: Date,
   maxDate?: Date,
   iconComponent?: React.Node,
-|};
+};
 
 export default class DatePicker extends React.Component<Props> {
   openDatePicker = () => {
